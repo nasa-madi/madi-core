@@ -1,0 +1,9 @@
+{
+  "label": "Web",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "The backend API for MADI."
+  }
+}
+
