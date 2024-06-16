@@ -28,24 +28,24 @@ node_modules
 
 
 # interfaces
-# /interfaces/chatbot-ui/*
-# /interfaces/chrome-extension/*
-# /interfaces/cli/*
-# /interfaces/web/*
+/interfaces/chatbot-ui/*
+/interfaces/chrome-extension/*
+/interfaces/cli/*
+/interfaces/web/*
 
 # # plugins
-# /plugins/cas_pipeline/*
-# /plugins/cas_mural/*
-# /plugins/madi-plg-semantic-scholar/*
-# /plugins/madi-plg-cas-confluence/*
-# /plugins/madi-plg-cas-scenarios/*
-# /plugins/visualGraph/*
+/plugins/cas_pipeline/*
+/plugins/cas_mural/*
+/plugins/madi-plg-semantic-scholar/*
+/plugins/madi-plg-cas-confluence/*
+/plugins/madi-plg-cas-scenarios/*
+/plugins/visualGraph/*
 
 # # Services
-# /api/*
-# /secureLLM/*
-# /terraform/*
-# /runner/*
+/api/*
+/secureLLM/*
+/terraform/*
+/runner/*
 
 # Testing
 /test-results/
