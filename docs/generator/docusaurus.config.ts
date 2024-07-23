@@ -10,42 +10,22 @@ const config: Config = {
   favicon: 'img/favicon.ico',
   noIndex: true,
   trailingSlash: false,
-
-  // Set the production url of your site here
   url: 'https://nasa-madi.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/madi-core/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'nasa-madi.github.io', // Usually your GitHub org/user name.
-  projectName: 'madi-core', // Usually your repo name.
-
+  organizationName: 'nasa-madi.github.io',
+  projectName: 'madi-core', 
   onBrokenLinks:'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       'classic',
       {
         docs: {
           routeBasePath: '/', // Serve the docs at the site's root
-           /* other docs plugin options */
-      
-          // sidebarPath: './sidebars.ts',
-          // // Please change this to your repo.
-          // // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/nasa-madi/madi-core/tree/main/madi/docs/generator',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -53,10 +33,37 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      {name: 'theme-color', content: '#317EFB'}, // Example theme color
+      {name: 'apple-mobile-web-app-capable', content: 'yes'},
+      {name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'},
+      {
+        name: 'apple-mobile-web-app-title',
+        content: 'Your App Title',
+      },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/madi-core/img/icons/apple-touch-icon.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/madi-core/img/icons/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/madi-core/img/icons/favicon-16x16.png',
+      },
+      {
+        rel: 'manifest',
+        href: '/madi-core/img/site.webmanifest',
+      },
+    ],
     navbar: {
       hideOnScroll: true,
       title: 'MADI',
@@ -65,12 +72,6 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
-      //   {
-      //     type: 'docSidebar',
-      //     sidebarId: 'tutorialSidebar',
-      //     position: 'left',
-      //     label: 'Overiew',
-      //   },
         {
           href: 'https://github.com/nasa-madi/madi-core',
           label: 'GitHub',
@@ -81,32 +82,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //     {
-        //       label: 'Tutorial',
-        //       to: '/dintro',
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: 'Stack Overflow',
-        //       href: 'https://stackoverflow.com/questions/tagged/nasa-madi',
-        //     },
-        //     // {
-        //     //   label: 'Discord',
-        //     //   href: 'https://discordapp.com/invite/docusaurus',
-        //     // },
-        //     // {
-        //     //   label: 'Twitter',
-        //     //   href: 'https://twitter.com/docusaurus',
-        //     // },
-        //   ],
-        // },
         {
           title: 'More',
           items: [
@@ -116,9 +91,7 @@ const config: Config = {
             },
           ],
         },
-      ],
-      //@ts-ignore
-      // copyright: `Built with Docusaurus.`,
+      ]
     },
     prism: {
       defaultLanguage: 'bash',

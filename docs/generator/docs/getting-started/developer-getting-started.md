@@ -1,8 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
+slug: '/advanced'
+title: 'Advanced'
 ---
 
-# Getting Started
+# Advanced Getting Started
 The service is composed of three major components, a frontend interface, a Node API on a PostgresDB, and a Langchain Pipeline server. 
 
 The tool set is as follows:

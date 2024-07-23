@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /api
 ---
 
 # Architecture
@@ -673,13 +674,20 @@ Once your PR is reviewed and approved, it will be merged into the main branch.
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is protected under the [MIT](https://opensource.org/license/mit) License. For more details, refer to the [LICENSE](https://github.com/nasa-madi/madi-core/blob/main/LICENSE) file.
 
 ---
 
 ##  Acknowledgments
 
-- List any resources, contributors, inspiration, etc. here.
+Special thanks go out to the MADI contributors:
+
+- [@jamesvillarrubia](https://github.com/jamesvillarrubia)
+- [@annie-miller](https://github.com/annie-miller)
+- [@jfortnermonegan](https://github.com/jfortnermonegan)
+- [@kimmoonjae](https://github.com/kimmoonjae)
+- [@waggyz](https://github.com/waggyz)
+
 
 [**Return**](#)
 

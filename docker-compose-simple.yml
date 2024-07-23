@@ -1,9 +1,21 @@
 services:
+
   ## This is the real API available at port 3030
   ##   - This builds an image for the top level docker-compose
   ##     and may not be the same image as built under the /api folder directly
   api:
-    image: nasa-madi/madi-api:latest
+    image: nasamadi/madi-api:latest
+    environment:
+      - NODE_ENV=development
+      - NODE_CONFIG_ENV=docker
+      - OPENAI_API_KEY=sk-XXXXXXXXXXXXXXXXXXXXXXXX
+    ports:
+      - "3030:3030"
+    networks:
+      - madi
+    depends_on:
+      database:
+        condition: service_healthy
 
   ## This is the postgres docker DB available at port 35432
   ##   - This only for local usage and has no bearing on CloudSQL
@@ -15,8 +27,8 @@ services:
       - POSTGRES_USER=unicorn_user
       - POSTGRES_PASSWORD=magical_password
       - POSTGRES_DB=rainbow_database
-    volumes:
-      - database-data:/var/lib/postgresql/data/
+    # volumes:
+    #   - database-data:/var/lib/postgresql/data/
     ports:
       - "5432:5432"
     networks:
@@ -32,9 +44,11 @@ services:
   #-----------------------------
   # This Sping up an NLMParser service with a bundled Apache Tika server instance
   parser-nlm:      
-    image: nasa-madi/madi-parser-nlm:latest
+    image: nasamadi/madi-parsers-nlm:latest
     ports:
       - 5010:5001
+    networks:
+      - madi
 
   #-----------------------------
   # CLOUD STORAGE MOCK SERVICE
@@ -42,7 +56,7 @@ services:
   # This mocks out a Google Cloud Storage server so that local testing
   # can be done with a GCS Bucket library.
   storage:
-    image: nasa-madi/madi-gcp-emulator:latest
+    image: nasamadi/madi-storage-gcp-emulator:latest
     environment:
       - PORT=9023
       - STORAGE_BASE=./api
@@ -66,10 +80,14 @@ services:
   # of the domain for this project. In the cloud, this should be served 
   # by a static proxy.
   interface-web:
-    image: nasa-madi/madi-web:latest
+    image: nasamadi/madi-interfaces-web:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - madi
 
 networks:
   madi:
 
-volumes:
-  database-data:
+# volumes:
+#   database-data:

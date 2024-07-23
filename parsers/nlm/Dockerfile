@@ -1,0 +1,1 @@
+FROM jamesmtc/nlm-ingestor:latest
