@@ -1,4 +1,4 @@
-file: plugin-loader.yml
+file: plugin-loader
 postgresql:
   debug: false
   connection:
@@ -7,7 +7,6 @@ postgresql:
   autoseed: true
 openai: 
   key: sk-XXXXXXXXXXXXXXXXXXXXXXXXXXX #overriden by github
-  cachePath: ./.cicd/cache
   stream: false
 storage:
   bucket: docker-bucket

@@ -1,13 +1,21 @@
 ---
-sidebar_position: 1
+sidebar_position: 30
 slug: /api
 ---
 
-# Architecture
+# API
+
+
+:::warning
+
+This page is incomplete and may not contain correct information.
+
+:::
+
 
 ##  Features
 
-See FeathersJS
+See [FeathersJS](https://feathersjs.com)
 
 
 

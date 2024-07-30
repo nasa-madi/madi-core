@@ -4,7 +4,7 @@ sidebar_position: 100
 
 # Sources & Attribution
 
-The following sources, articles, libraries, etc. were used in the creation of MADI.
+The following sources, articles, libraries, etc. were used or referenced in the creation of MADI.  Not all elements are included in the current product.
 
 * Graphs
     * [Spinning Around In Cycles With Directed Acyclic Graphs](https://medium.com/basecs/spinning-around-in-cycles-with-directed-acyclic-graphs-a233496d4688)

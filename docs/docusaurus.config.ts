@@ -33,6 +33,10 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
     metadata: [
       {name: 'theme-color', content: '#317EFB'}, // Example theme color

@@ -29,44 +29,45 @@ For more detailed instructions and troubleshooting, refer to the official Docker
 
 After installing Docker, you need to fetch the Docker Compose file that includes all the necessary components for MADI.
 
-Download the Docker Compose file using the following command:
+Download the necessary files using the following command:
 
 ```shell
-curl -o docker-compose-simple.yml https://raw.githubusercontent.com/nasa-madi/madi-core/main/docker-compose-simple.yml
+mkdir simple-stack
+cd simple-stack
+curl -o docker-compose.yml https://raw.githubusercontent.com/nasa-madi/madi-core/main/examples/simple-stack/docker-compose.yml
+curl -o config.yml https://raw.githubusercontent.com/nasa-madi/madi-core/main/examples/simple-stack/config.yml
 ```
 
-Once the file is downloaded, navigate to the folder containing `docker-compose-simple.yml`, and pull the required Docker images:
+Once the file is downloaded, you can start up the docker compose services from the `simple-stack` folder:
 
 ```shell
-docker compose -f docker-compose-simple.yml pull
+docker compose pull
 ```
 
 ### 3. Add Environment Variables
 
-In the `docker-compose-simple.yml` file that you downloaded, locate the section related to the API service:
+In the `config.yml` file that you downloaded, locate the section related to openai:
 
 ```yaml
-  api:
-    image: nasamadi/madi-api:latest
-    environment:
-      - NODE_ENV=development
-      - NODE_CONFIG_ENV=docker
-      - OPENAI_API_KEY=sk-XXXXXXXXXXXXXXXXXXXXXXXX
-    ports:
-      - "3030:3030"
+openai: 
+  key: sk-XXXXXXXXXXXXXXXXXX #This is what you change.
 ```
 
-Replace `sk-XXXXXXXXXXXXXXXXXXXXXXXX` with your own OpenAI API key. Ensure that you keep the key secure and do not expose it publicly. Save the changes to the file.
+Replace `sk-XXXXXXXXXXXXXXXXXXXXXXXX` with your own OpenAI API key. Ensure that you keep the key secure and do not expose it publicly. Save the changes to the file.  This config file will be pulled into the API container and used locally to run your API with your own key.
 
 ### 4. Running the Stack
-
 To start the MADI stack, run the following command in your terminal:
 
 ```shell
-docker compose -f docker-compose-simple.yml -p madi-simple up
+docker compose up
 ```
 
 If everything is configured correctly, Docker will start up the containers and you should be able to access your local MADI instance by navigating to `http://localhost:3000` in your web browser.
+
+
+
+
+
 
 
 ### 5. Side-Loading a Plugin
