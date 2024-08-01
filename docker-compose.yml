@@ -12,6 +12,7 @@ services:
       service: api
     profiles:
       - backend
+      - local-fullstack
       - fullstack
       - ''
 
@@ -27,6 +28,7 @@ services:
       service: database
     profiles:
       - backend
+      - local-fullstack
       - fullstack
       - ''
 
@@ -41,6 +43,7 @@ services:
       service: storage
     profiles:
       - backend
+      - local-fullstack
       - fullstack
       - ''
 
@@ -54,6 +57,7 @@ services:
       service: nlm-ingestor
     profiles:
       - backend
+      - local-fullstack
       - fullstack
       - ''
   #-----------------------------
@@ -68,12 +72,26 @@ services:
       service: web
     profiles:
       - frontend
+      - local-fullstack
       - fullstack
       - ''
+
+  #-----------------------------
+  # LOCAL LLM SERVICE
+  #-----------------------------
+  # This is an instance of an Ollama docker container that runs entirely locally.
+  # This can be done to test the LLM functionality locally without need for a cloud API key.
+  # It is significantly slower than the cloud version, but can be GPU enabled on some platforms.
+  local-llm:
+    extends:
+      file: ./local-llm/docker-compose.yml
+      service: ollama
+    profiles:
+      - local-fullstack
 
 networks:
   madi:
 
 volumes:
   database-data:
-  vss-data:
+  ollama:

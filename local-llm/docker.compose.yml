@@ -1,0 +1,18 @@
+services:
+
+  # https://github.com/adamjenkins/pillama/blob/main/docker-compose.yaml
+  ollama:
+    build: .
+    volumes:
+      - ollama:/root/.ollama
+    restart: always
+    environment:
+      - MODEL_VERSION=llama3.1
+    container_name: ollama
+    pull_policy: always
+    tty: true
+    ports:
+      - "11434:11434"
+
+volumes:
+  ollama:
