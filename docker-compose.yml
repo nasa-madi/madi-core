@@ -54,7 +54,7 @@ services:
   parser-nlm:
     extends:
       file: ./parsers/docker-compose.yml
-      service: nlm-ingestor
+      service: parser-nlm
     profiles:
       - backend
       - local-fullstack

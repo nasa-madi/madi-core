@@ -2,13 +2,13 @@
 services:
 
   # https://github.com/nlmatics/nlm-ingestor
-  nlm-ingestor:
-    image: jamesmtc/nlm-ingestor:latest
+  parser-nlm:
+    image: nasa-madi/madi-parsers-nlm:latest
     ports:
       - 5010:5001
 
   # https://github.com/Unstructured-IO/unstructured-api
-  unstructured:
+  parser-unstructured:
     image: downloads.unstructured.io/unstructured-io/unstructured-api:latest
     ports:
       - 8000:8000

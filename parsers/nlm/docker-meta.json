@@ -1,0 +1,14 @@
+{
+    "full_description": "This Docker Hub repository contains a fork of nlm-ingestor, which is a critical component of the MADI (Modular AI for Innovation and Design) project. nlm-ingestor is a tool that provides custom parsers for various file formats, including PDF, HTML, and text, with a focus on retrieval-augmented generation (RAG) tasks. The PDF parser utilizes a rule-based approach that leverages text coordinates, graphics, and font data, with optional OCR functionality for scanned documents. This is achieved through a modified version of Apache Tika. Additionally, the tool supports HTML parsing to create layout-aware blocks and a text parser that identifies lists, tables, and headers based on content alone. The ingestor is designed to work with the llmsherpa API, facilitating data extraction and preparation for large language model (LLM) projects. As part of the MADI project, this parser is one component of a broader ecosystem aimed at enhancing AI-driven research and development. By using Docker, this tool can be easily deployed in various environments, making it accessible for researchers and developers working on text data processing.",
+    "description": "A tool for custom parsers for various file formats with focus on RAG tasks.",
+    "categories": [
+        {
+          "slug": "machine-learning-and-ai",
+          "name": "machine-learning-and-ai"
+        },
+        {
+          "slug": "data-science",
+          "name": "data-science"
+        }
+      ]
+}
