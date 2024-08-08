@@ -1,14 +1,14 @@
 {
   "full_description": "This Docker Hub repository contains an Ollama Docker container, a powerful and user-friendly platform for running Large Language Models (LLMs) on your local machine. Ollama simplifies the process of downloading, installing, and interacting with a diverse range of LLMs, empowering users to explore their capabilities without extensive technical expertise or reliance on cloud-based platforms. Key features include access to a comprehensive library of pre-trained models, user-friendly installation across Windows, macOS, and Linux, a local API for seamless integration, extensive customization and fine-tuning options, hardware acceleration, interactive user interfaces, and offline access for enhanced privacy. Ollama is a cost-effective, secure, and flexible solution that supports experimentation, learning, and integration with existing workflows.",
-  "description": "An Ollama Docker container for running and managing LLMs locally with a user-friendly platform and extensive customization options.",
+  "description": "An Ollama Docker container for running LLMs locally",
   "categories": [
-      {
-          "slug": "artificial-intelligence",
-          "name": "Artificial Intelligence"
-      },
-      {
-          "slug": "machine-learning",
-          "name": "Machine Learning"
-      }
+        {
+            "slug": "machine-learning-and-ai",
+            "name": "machine-learning-and-ai"
+        },
+        {
+            "slug": "data-science",
+            "name": "data-science"
+        }
   ]
 }

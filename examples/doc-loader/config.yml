@@ -1,0 +1,31 @@
+file: doc-loader
+postgresql:
+  debug: false
+  connection:
+    host: database
+  automigrate: true
+  autoseed: true
+openai: 
+  key: sk-XXXXXXXXXXXXXXXXXXXXXXXXXXX #overriden by github
+  stream: false
+storage:
+  bucket: docker-bucket
+  apiEndpoint: http://storage:9023
+  baseUrl: storage:9023
+plugins:
+  failOnImportError: true
+  path: ../plugins
+  start: index.js
+  default:
+    # - armdEBooks:
+    #     path: ../plugins
+    #     start: index.js
+    - casHIT
+    - casScamper
+    - casScenarios
+    - searchSemanticScholar
+  restricted:
+    # - searchPatents
+  development:
+    - devGetWeather
+    - devGetTime

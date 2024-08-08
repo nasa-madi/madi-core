@@ -1,0 +1,14 @@
+{
+  "full_description": "This Docker Hub repository hosts a Google Cloud Storage Emulator container, a lightweight and practical tool for simulating the Cloud Storage API locally. Ideal for development and testing environments, this emulator allows users to run tests and build applications without the need to connect to production Storage APIs. Key features include a straightforward CLI for starting and managing the emulator, support for in-memory data storage, customizable storage directories, automatic bucket creation, and compatibility with the Google client library. The emulator is a work-in-progress, supporting a limited subset of the API, but provides a valuable solution for offline development and integration with CI/CD workflows.",
+  "description": "A Google Cloud Storage Emulator container for local development and testing.",
+  "categories": [
+    {
+      "slug": "databases-and-storage",
+      "name": "databases-and-storage"
+    },
+    {
+      "slug": "developer-tools",
+      "name": "developer-tools"
+    }
+  ]
+}

@@ -51,7 +51,8 @@ The following sources, articles, libraries, etc. were used or referenced in the 
     * https://github.com/nemoteric/GPT-4-Chat-UI (very simple)
 * Images
     * [Robot icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/robot)
-
+* Blobs
+    * [File Examples](https://file-examples.com/)
 
 
 * Unlisted

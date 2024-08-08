@@ -7,7 +7,7 @@ services:
   # This mocks out a Google Cloud Storage server so that local testing
   # can be done with a GCS Bucket library.
   storage:
-    build: ./gcp-emulator
+    build: ./gcs-emulator
     environment:
       - PORT=9023
       - STORAGE_BASE=./api
