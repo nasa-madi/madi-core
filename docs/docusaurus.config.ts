@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'MADI',
-  tagline: 'Modular AI for Innovation and Design',
+  tagline: 'Modular AI for Design and Innovation',
   favicon: 'img/favicon.ico',
   noIndex: true,
   trailingSlash: false,
@@ -48,14 +48,14 @@ const config: Config = {
       {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/madi-core/img/icons/favicon-16x16.png'},
       {rel: 'manifest', href: '/madi-core/img/site.webmanifest'},
       // Open Graph (OG) tags
-      {property: 'og:title', content: 'MADI - Modular AI for Innovation and Design'},
+      {property: 'og:title', content: 'MADI - Modular AI for Design and Innovation'},
       {property: 'og:type', content: 'website'},
       {property: 'og:image', content: '/madi-core/img/og-image@0_5x.png'},
       {property: 'og:url', content: 'https://nasa-madi.github.io/madi-core/'},
       {property: 'og:description', content: 'MADI aims to improve visualization and interaction with digital infrastructure data for aerospace applications using AI.'},
       // Twitter card tags
       {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'MADI - Modular AI for Innovation and Design'},
+      {name: 'twitter:title', content: 'MADI - Modular AI for Design and Innovation'},
       {name: 'twitter:description', content: 'MADI aims to improve visualization and interaction with digital infrastructure data for aerospace applications using AI.'},
       {name: 'twitter:image', content: '/madi-core/img/og-image@0_5x.png'},
     ],

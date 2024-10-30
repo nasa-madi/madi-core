@@ -26,6 +26,7 @@ node_modules
 .cicd
 .dockerignore
 
+/docs/holding
 
 # interfaces
 /interfaces/chatbot-ui/*
